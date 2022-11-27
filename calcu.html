@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/css/calcu.css">
+
+    <style>
+
+        body{
+            background-color: white;
+        }
+        
+        #psr{
+            width: 300px;
+            height: 150px;
+            margin-left: 40px;
+            margin-top: 20px;;
+            border-style: inset;
+            text-align: center;
+            font-size: 30px;
+            font-family: fantasy;
+            color: aliceblue;
+            background-color: black; 
+            border-style: none;
+            color: none;
+            text-shadow: 5px 10px 20px;
+            
+        
+        }
+        
+        #gg{
+            background-color: black;
+            width: 400px;
+            height:570px;
+            margin-left: 700px;
+            margin-top: 70px;
+            border-radius: 100px;
+            border-style: groove;
+            box-shadow: 10px 10px 30px black;
+        
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div id="gg">
+    <input type="text" id="psr" disabled >
+    <br>
+    <br>
+    &nbsp;  &nbsp;
+     
+    <input type="button" value="1" id="1" onclick="psr.value+=1" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="2" id="2"  onclick="psr.value+=2"style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="3" id="3" onclick="psr.value+=3" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="4" id="4" onclick="psr.value+=4" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+
+    <br>
+    <br>
+    &nbsp;  &nbsp;  
+    <input type="button" value="5" id="5" onclick="psr.value+=5" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey;  color: white;">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="6" id="6"  onclick="psr.value+=6" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="7" id="7" onclick="psr.value+=7" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="8" id="8" onclick="psr.value+=8" style="font-size: 20px; width:70px; height:70px ;border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+
+    <br>
+    <br>
+    
+    &nbsp;  &nbsp; 
+    <input type="button" value="9" id="9" onclick="psr.value+=9" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+
+    <input type="button" value="0" id="zero" onclick="psr.value+=0" style="font-size: 20px; width:70px; height:70px ; border-radius: 40px; border-style: none; background-color: grey; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="C" id="C" onclick="document.getElementById('psr').value = ''" style="font-size: 40px; border-radius: 40px; border-style: none; width:70px; height:70px ; background-color: orange; border-style: none; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="=" id="==" onclick="equ()" style="font-size: 40px; width:70px; height:70px ;background-color: orange; border-style: none; border-radius: 40px; border-style: none; color: white;">
+    <br>
+    <br>
+    &nbsp;  &nbsp; 
+    <input type="button" value="+" id="Plus" onclick="psr.value+='+'" style="font-size: 40px; width:70px; height:70px ; background-color: orange; border-style: none; border-radius: 40px; border-style: none; color: white;  ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="-" id="false" onclick="psr.value+='-'" style="font-size: 40px; width:70px; height:70px ; background-color: orange; border-style: none; border-radius: 40px; border-style: none; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="*" id="x" onclick="psr.value+='*'" style="font-size: 40px; width:70px; height:70px ; background-color: orange; border-style: none; border-radius: 40px; border-style: none; color: white; ">
+    &nbsp;  &nbsp;  &nbsp;
+    <input type="button" value="/" id="/" onclick="psr.value+='/'" style="font-size: 40px; width:70px; height:70px ; background-color: orange; border-style: none; border-radius: 40px; border-style: none; color: white; ">
+    
+</div>
+
+
+
+<script>
+    function equ()
+    {
+        let eq=eval(document.getElementById("psr").value);
+        document.getElementById("psr").value=eq;
+
+    }
+</script>
+    
+</body>
+</html>
